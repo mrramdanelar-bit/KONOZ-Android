@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Konoz – كنوز</string>
+    <string name="brand_title">KONOZ – كنوز</string>
+    <string name="brand_subtitle">المساعد الذكي لتحليل الرموز والنقوش ومطابقة الدليل اليدوي</string>
+
+    <!-- Navigation & Home -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_image_analysis">تحليل صورة</string>
+    <string name="nav_text_analysis">التحليل بالوصف</string>
+    <string name="nav_history">سجل التحليلات</string>
+    <string name="nav_knowledge_base">قاعدة الرموز</string>
+    <string name="nav_favorites">المفضلة</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="nav_about">معلومات التطبيق</string>
+    <string name="action_back">رجوع</string>
+
+    <!-- Image Analysis -->
+    <string name="image_capture_camera">التقاط صورة بالكاميرا</string>
+    <string name="image_pick_single">اختيار صورة من الهاتف</string>
+    <string name="image_pick_multiple">إضافة عدة صور للحالة</string>
+    <string name="image_crop_region">تحديد منطقة القص</string>
+    <string name="image_crop_apply">اعتماد القص</string>
+    <string name="image_crop_reset">إلغاء القص</string>
+    <string name="image_optional_desc_hint">أضف وصفاً اختيارياً (السطح، اتجاه الرمز، ما يحيط به...)</string>
+    <string name="action_start_analysis">بدء التحليل الذكي</string>
+    <string name="action_local_match">مطابقة محلية فورية (دون إنترنت)</string>
+
+    <!-- Text Analysis -->
+    <string name="text_desc_hint">صف الرموز أو النقوش التي شاهدتها بدقة (مثال: وجدت حرف L على صخرة، بجانبه حرف I، وتحته رقم 4، وهناك نقطة كبيرة قرب الحروف.)</string>
+    <string name="followup_hint">أضف معلومة جديدة لإعادة التقييم (مثال: الرمز مقلوب، توجد شجرة بجانبه...)</string>
+    <string name="action_send_followup">إعادة التقييم</string>
+
+    <!-- Report Sections -->
+    <string name="report_section_summary">1. ملخص الحالة</string>
+    <string name="report_section_detected">2. الرموز المكتشفة</string>
+    <string name="report_section_matches">3. المطابقة مع الدليل</string>
+    <string name="report_section_relations">4. العلاقات بين الرموز</string>
+    <string name="report_section_hypotheses">5. الاحتمالات التفسيرية</string>
+    <string name="report_section_conflicts">6. التعارضات والبدائل</string>
+    <string name="report_section_missing">7. المعلومات الناقصة</string>
+    <string name="report_section_confidence">8. مستوى الثقة</string>
+    <string name="report_section_warnings">9. التحذيرات والمسؤولية</string>
+
+    <!-- Safety & Disclaimers -->
+    <string name="hazard_warning_mandatory">قد تكون هذه العلامة مرتبطة بخطر ميداني. ابتعد عن الموقع ولا تلمس العلامة أو الأجسام المحيطة بها. تواصل مع الجهات المختصة.</string>
+    <string name="heritage_warning_mandatory">إذا ظهرت قبور أو نقوش أو مواقع ذات قيمة أثرية محتملة، يوصى بتوثيقها دون إتلافها وإبلاغ الجهات المختصة.</string>
+    <string name="guide_disclaimer">تنبيه منهجي: القواعد الواردة في الدليل فرضيات خاصة بالمستخدم لأغراض التوثيق والدراسة، وليست مرجعاً أثرياً علمياً مثبتاً.</string>
+
+    <!-- Friendly Error Messages -->
+    <string name="err_connection">تعذر إكمال التحليل بسبب مشكلة في الاتصال. بياناتك محفوظة ويمكنك إعادة المحاولة.</string>
+    <string name="err_timeout">انتهت مهلة انتظار التحليل. بياناتك محفوظة ويمكنك إعادة المحاولة أو زيادة المهلة من الإعدادات.</string>
+    <string name="err_model_unavailable">نموذج الذكاء الاصطناعي غير متاح مؤقتاً. بياناتك محفوظة ويمكنك المحاولة لاحقاً أو استخدام المطابقة المحلية.</string>
+    <string name="err_image_empty">الصورة المختارة فارغة أو تالفة. يرجى اختيار صورة أخرى صالحة.</string>
+    <string name="err_image_too_large">حجم الصورة يتجاوز الحد المسموح به. يرجى اختيار صورة أصغر أو قص المنطقة المطلوبة.</string>
+    <string name="err_image_unclear">الصورة غير واضحة بما يكفي لقراءة العلامات بثقة. لن يتم تخمين الحروف أو الأرقام؛ يرجى التقاط صورة أوضح.</string>
+    <string name="err_no_symbols">لم يتم رصد رموز أو علامات قابلة للمطابقة. أضف وصفاً أدق أو صورة أقرب للعلامة.</string>
+    <string name="err_save_report">تعذر حفظ التقرير في قاعدة البيانات المحلية. يرجى المحاولة مرة أخرى.</string>
+    <string name="err_restore_backup">تعذر استعادة النسخة الاحتياطية؛ تأكد من أن ملف JSON سليم ومتوافق مع دليل كنوز.</string>
+    <string name="err_invalid_provider">تعذر التحقق من إعدادات مزود الذكاء الاصطناعي أو مفتاح الوصول. راجع شاشة الإعدادات.</string>
+    <string name="err_camera_permission">يلزم منح إذن الكاميرا لالتقاط صور الرموز مباشرة، أو يمكنك اختيار صورة من الهاتف.</string>
+</resources>

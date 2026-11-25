@@ -1,0 +1,6 @@
+{
+  "name": "Konoz – كنوز",
+  "description": "مساعد ذكي لتحليل الصور والرموز والنقوش ومقارنتها بقاعدة معرفية محلية قابلة للتطوير",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
