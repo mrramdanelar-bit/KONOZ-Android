@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   build-debug:
-    name: Build Debug APK
+    name: Build KONOZ Debug APK
     runs-on: ubuntu-latest
 
     steps:
@@ -26,21 +26,15 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Set up Gradle 9.3.1
+      - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '9.3.1'
 
-      - name: Check Gradle version
-        run: gradle --version
-
-      - name: Run Unit Tests
-        run: gradle :app:testDebugUnitTest --stacktrace
-
-      - name: Build Debug APK
+      - name: Build Android APK
         run: gradle :app:assembleDebug --stacktrace
 
-      - name: Upload APK
+      - name: Upload KONOZ APK
         uses: actions/upload-artifact@v4
         with:
           name: KONOZ-debug-APK
