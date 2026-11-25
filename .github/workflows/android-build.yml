@@ -1,5 +1,5 @@
 
-name: Android CI – Build KONOZ APK
+name: Android CI - Build KONOZ APK
 
 on:
   push:
@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   build-debug:
-    name: Build Debug APK & Run Unit Tests
+    name: Build Debug APK
     runs-on: ubuntu-latest
 
     steps:
@@ -26,19 +26,24 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Set up Gradle
+      - name: Set up Gradle 9.3.1
         uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.3.1'
 
-      - name: Run Unit & Robolectric Tests
-        run: ./gradlew :app:testDebugUnitTest --stacktrace
+      - name: Check Gradle version
+        run: gradle --version
 
-      - name: Assemble Debug APK
-        run: ./gradlew :app:assembleDebug --stacktrace
+      - name: Run Unit Tests
+        run: gradle :app:testDebugUnitTest --stacktrace
 
-      - name: Upload Debug APK
+      - name: Build Debug APK
+        run: gradle :app:assembleDebug --stacktrace
+
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: konoz-app-debug-apk
+          name: KONOZ-debug-APK
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 30
